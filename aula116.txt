@@ -1,0 +1,6 @@
+Nome: Igor
+Idade: 18
+Nome: Nine
+Idade: 19
+Nome: Isabela
+Idade: 12
