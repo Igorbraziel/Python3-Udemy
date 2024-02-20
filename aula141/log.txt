@@ -1,0 +1,6 @@
+Error: Nosso Erro LogFileMixin
+Success: Testando LogFileMixin
+Error: Nosso Erro LogFileMixin
+Success: Testando LogFileMixin
+Success: Seu Galaxy está ligado SmartPhone
+Error: Seu Iphone está desligado SmartPhone
