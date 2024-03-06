@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout
+from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QLayout, QMessageBox
 
 class MyMainWindow(QMainWindow):
     def __init__(self, parent: QWidget | None = None, *args, **kwargs):
@@ -6,8 +6,7 @@ class MyMainWindow(QMainWindow):
         
         #Making the Widgets
         self.central_widget = QWidget()
-        self.VLayout = QVBoxLayout() 
-        self.setStyleSheet('background-color: gray')
+        self.VLayout = QVBoxLayout()
         self.central_widget.setLayout(self.VLayout)
         self.setCentralWidget(self.central_widget)
         
@@ -21,3 +20,10 @@ class MyMainWindow(QMainWindow):
         
     def addWidgetToVLayout(self, widget: QWidget):
         self.VLayout.addWidget(widget)
+        
+    def addLayoutToVLayout(self, layout: QLayout):
+        self.VLayout.addLayout(layout)
+        
+    def makeMessageBox(self) -> QMessageBox:
+        return QMessageBox(self)
+        
