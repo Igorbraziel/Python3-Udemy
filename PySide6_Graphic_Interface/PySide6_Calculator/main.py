@@ -4,7 +4,6 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication
 
 from main_window import MyMainWindow
-from buttons import MyButton
 from buttons import ButtonsGrid
 from variables import IMAGE_PATH
 from display import Display
@@ -34,8 +33,6 @@ if __name__ == '__main__':
     # Making a Buttons Grid
     buttons_grid = ButtonsGrid(display_, info, window)
     window.addLayoutToVLayout(buttons_grid)
-    
-    # Making Buttons
     
     # Executing
     window.adjustFixedSize()

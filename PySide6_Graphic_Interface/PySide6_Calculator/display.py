@@ -8,6 +8,8 @@ class Display(QLineEdit):
     signalEnter = Signal()
     signalDelete = Signal()
     signalEscape = Signal()
+    signalNegative = Signal()
+    signalClear = Signal()
     signalInput = Signal(str)
     signalOperator = Signal(str)
     
@@ -33,12 +35,18 @@ class Display(QLineEdit):
         if isEnter or text == '=':
             self.signalEnter.emit()
             return event.ignore()
-        elif isDelete or text.lower() == 'c':
+        elif isDelete:
             self.signalDelete.emit()
             return event.ignore()
         elif isEscape or text.lower() == 'e' :
             self.signalEscape.emit()
             return event.ignore()
+        elif text.upper() == 'N':
+            self.signalNegative.emit()
+            return event.ignore()
+        elif text.upper() == 'C':
+            self.signalClear.emit()
+            event.ignore()
         elif isNumOrDot(text):
             self.signalInput.emit(text)
             return event.ignore()
