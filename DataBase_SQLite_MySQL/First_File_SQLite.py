@@ -38,9 +38,20 @@ cursor.executemany(sql, (
     {'name': 'Nine', 'weight': 60},
     {'name': 'Isabela', 'weight': 40},
     {'name': 'Ledinha', 'weight': 55}
+)   
 )
-)
+connection.commit()
 
+cursor.execute(
+    f'DELETE FROM {TABLE_NAME} WHERE id=1'
+)
+connection.commit()
+
+cursor.execute(
+    f'UPDATE {TABLE_NAME} '
+    'SET weight="69.50", name="New_Igor" '
+    'WHERE id="3"'
+)
 connection.commit()
 
 # Closing
