@@ -23,6 +23,7 @@ class Foo(AbstractFoo):
     @name.setter
     def name(self, name):
         self._name = name
+    
         
 foo = Foo('igor')
 print(foo.name)

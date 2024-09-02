@@ -30,7 +30,6 @@ class Banco:
             return True
         return False
         
-        
     def autenticar(self, cliente: pessoas.Cliente):
         if self.checa_cliente(cliente) and self.checa_conta(cliente.conta) and self.checa_agencia(cliente.conta.agencia):
             return True
@@ -40,6 +39,7 @@ class Banco:
         class_name = self.__class__.__name__
         class_attrs = f'({self._agencias}, {self._clientes}, {self._contas})'
         return f'{class_name}{class_attrs}'
+    
     
 if __name__ == '__main__':
     c1 = pessoas.Cliente('Luiz', 30)
