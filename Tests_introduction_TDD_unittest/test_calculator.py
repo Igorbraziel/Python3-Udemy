@@ -11,7 +11,7 @@ class TestCalculator(unittest.TestCase):
         
     def soma_x_nao_inteiro__com_y_inteiro_e_retorna_assertionerror(self):
         with self.assertRaises(AssertionError):
-            return soma('0', 2)
+            soma('1', 2)
         
         
 unittest.main(verbosity=2)
